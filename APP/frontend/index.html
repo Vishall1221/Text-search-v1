@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Movie Scene Search</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div class="eyebrow">TEXT SEARCH V1 · LOCAL</div>
+      <h1>Find the movie. Find the moment.</h1>
+      <p>Search titles, cast, genres, dialogue, and scene descriptions across the current catalog.</p>
+    </header>
+
+    <form id="search-form" class="search-form" autocomplete="off">
+      <label class="sr-only" for="query">Search the movie catalog</label>
+      <input id="query" name="query" type="search" maxlength="500" autofocus
+        placeholder="Try: Neel Shimana tea estate scene" required />
+      <button type="submit">Search</button>
+    </form>
+    <div class="examples" aria-label="Example searches">
+      <span>Try</span>
+      <button type="button" data-query="Neel Shimana">Neel Shimana</button>
+      <button type="button" data-query="Bengali romantic drama">Bengali romantic drama</button>
+      <button type="button" data-query="Dev at the tea estate">Dev at the tea estate</button>
+    </div>
+
+    <div id="status" class="status" role="status" aria-live="polite">Type a query and press Enter.</div>
+    <section id="results" class="results" aria-label="Search results"></section>
+  </main>
+
+  <dialog id="player-dialog" class="player-dialog" aria-label="Movie scene player">
+    <div class="player-head">
+      <div>
+        <strong id="player-title"></strong>
+        <span id="player-time"></span>
+      </div>
+      <button id="player-close" type="button" aria-label="Close player">×</button>
+    </div>
+    <video id="player" controls preload="metadata" playsinline></video>
+    <p id="player-message" class="player-message"></p>
+  </dialog>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>

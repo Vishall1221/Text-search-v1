@@ -1,0 +1,49 @@
+:root { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #202538; background: #f7f8fc; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.shell { width: min(1040px, calc(100% - 40px)); margin: 0 auto; padding: 64px 0 80px; }
+.masthead { margin-bottom: 30px; }
+.eyebrow { color: #5d57bd; font-size: 11px; font-weight: 800; letter-spacing: .14em; }
+h1 { font-size: clamp(30px, 5vw, 51px); line-height: 1.08; letter-spacing: -.045em; margin: 12px 0; }
+.masthead p { color: #667088; max-width: 640px; line-height: 1.55; margin: 0; }
+.search-form { display: flex; gap: 10px; padding: 7px; background: #fff; border: 1px solid #dce0ec; border-radius: 14px; box-shadow: 0 8px 28px #2025380d; }
+.search-form:focus-within { border-color: #7469d9; box-shadow: 0 0 0 3px #7469d91c; }
+.search-form input { flex: 1; min-width: 0; border: 0; outline: 0; padding: 11px 14px; background: transparent; color: #202538; }
+.search-form button, .primary-action { border: 0; border-radius: 9px; padding: 11px 21px; color: #fff; background: #5e54c8; font-weight: 700; }
+.search-form button:hover, .primary-action:hover { background: #4840ad; }
+.examples { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 14px 0 25px; color: #8990a3; font-size: 12px; }
+.examples button { border: 1px solid #dfe2ee; background: #fff; border-radius: 999px; padding: 6px 10px; color: #59617c; font-size: 12px; }
+.examples button:hover { border-color: #7469d9; color: #4c43aa; }
+.status { min-height: 20px; margin: 0 0 16px; color: #667088; font-size: 13px; }
+.results { display: grid; gap: 18px; }
+.movie { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 20px; background: #fff; border: 1px solid #e5e8f0; border-radius: 16px; padding: 20px; box-shadow: 0 6px 22px #20253808; }
+.poster { width: 140px; height: 190px; object-fit: cover; border-radius: 10px; background: linear-gradient(135deg,#dedaf7,#e8eaf4); }
+.poster-fallback { display: flex; align-items: center; justify-content: center; color: #68619f; font-size: 30px; font-weight: 800; }
+.movie-top { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+.movie h2 { margin: 0; font-size: 23px; letter-spacing: -.02em; }
+.score { white-space: nowrap; border-radius: 999px; padding: 6px 10px; background: #e9f7f0; color: #19734f; font-size: 12px; font-weight: 750; }
+.meta { color: #6c7489; font-size: 13px; margin: 5px 0 10px; }
+.reason { color: #5e54c8; font-size: 12px; font-weight: 700; }
+.description { color: #555e73; line-height: 1.5; margin: 9px 0 14px; font-size: 13px; }
+.scene-heading { margin: 17px 0 7px; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: #8890a3; }
+.scene-list { display: grid; gap: 8px; }
+.scene { display: flex; gap: 12px; justify-content: space-between; align-items: start; background: #f8f9fd; border: 1px solid #edf0f5; border-radius: 10px; padding: 11px 12px; }
+.scene-copy { min-width: 0; }
+.scene-time { color: #5148ae; font-weight: 800; font-size: 12px; }
+.scene-summary { color: #4f5870; font-size: 12px; line-height: 1.45; margin-top: 4px; }
+.scene button { border: 1px solid #ccc8ef; background: #fff; color: #5148ae; border-radius: 7px; padding: 7px 10px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.scene button:hover { background: #eeeafa; }
+.gcs { overflow-wrap: anywhere; font-size: 11px; color: #8b92a4; margin-top: 12px; }
+.empty { border: 1px dashed #cbd0e0; border-radius: 14px; padding: 38px; text-align: center; color: #667088; background: #fff; }
+.player-dialog { width: min(820px, calc(100% - 24px)); border: 0; border-radius: 15px; padding: 18px; box-shadow: 0 22px 80px #12172b55; }
+.player-dialog::backdrop { background: #14192ab8; }
+.player-head { display: flex; align-items: start; justify-content: space-between; margin-bottom: 12px; }
+.player-head strong { display: block; }
+.player-head span { color: #6c7489; font-size: 12px; }
+.player-head button { border: 0; background: transparent; color: #6c7489; font-size: 26px; line-height: 1; }
+.player-dialog video { width: 100%; background: #111; max-height: 65vh; }
+.player-message { min-height: 20px; color: #8a4e31; font-size: 12px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 640px) { .shell { padding-top: 34px; } .movie { grid-template-columns: 1fr; } .poster { width: 100%; height: 170px; } .search-form button { padding-inline: 13px; } .scene { flex-direction: column; } }
